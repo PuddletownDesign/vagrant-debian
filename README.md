@@ -35,8 +35,7 @@ This installation guide assumes you have homebrew and the `take` command that co
 
 Or create a fork if you want to add modifications, then and clone your fork.
 
-`$ git clone https://github.com/PuddletownDesign/vagrant-debian home`
-`$ cd home/`
+`$ git clone https://github.com/PuddletownDesign/vagrant-debian home && cd home`
 
 ### Install Vagrant Plugins
 
@@ -46,10 +45,16 @@ Or create a fork if you want to add modifications, then and clone your fork.
 
 This process might take a while as it will need to download a Debian ISO, VirtualBox guest additions, and runs updates.
 
-`$ vagrant up`
+`$ vagrant up && vagrant ssh`
 
 ### Log into the machine Via SSH
 
-`$ vagrant ssh`
-
 The machine is now set up and you are in.
+
+## Install Puddletown Configuration
+
+Once you logged into debian, run the following to install puddletown settings for zsh and git
+
+```
+$ git clone https://github.com/PuddletownDesign/config-installer && cd config-installer && git checkout linux-headless && ./install.sh
+```

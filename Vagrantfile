@@ -72,6 +72,7 @@ Vagrant.configure("2") do |config|
     sudo aptitude update
     sudo apt-get update
 	sudo apt-get install linux-headers-$(uname -r) build-essential dkms -y
-    # apt-get install -y apache2
+	sudo apt-get install git -y
+
   SHELL
 end
